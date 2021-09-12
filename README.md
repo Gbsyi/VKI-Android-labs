@@ -1,2 +1,2 @@
-# VKI-Android labs
+# Лабараторные по Android
  

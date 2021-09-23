@@ -2,6 +2,7 @@ package com.example.lab4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         AnimationDrawable img = (AnimationDrawable) findViewById(R.id.animationView).getBackground();
         Button stopBtn = findViewById(R.id.stopBtn);
         Button playBtn = findViewById(R.id.playBtn);
+        Button zxcBtn = findViewById(R.id.zxcBtn);
         if(img.isRunning()){
             playBtn.setEnabled(false);
             stopBtn.setEnabled(true);
@@ -46,5 +50,10 @@ public class MainActivity extends AppCompatActivity {
             stopBtn.setEnabled(true);
             playBtn.setEnabled(false);
         });
+        zxcBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, zxc.class);
+            startActivity(intent);
+        });
+
     }
 }

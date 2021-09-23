@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab4">
         <activity
+            android:name=".zxc"
+            android:parentActivityName=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

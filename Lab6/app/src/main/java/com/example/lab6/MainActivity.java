@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         Button getDataButton = findViewById(R.id.getDataButton);
         saveDataButton.setOnClickListener(this::saveData);
         getDataButton.setOnClickListener(this::getData);
-        Button changeActivityButton = findViewById(R.id.nextActivityButton);
-        changeActivityButton.setOnClickListener(this::changeActivity);
     }
 
     @Override
@@ -43,10 +41,6 @@ public class MainActivity extends AppCompatActivity {
         TextView dataView = (TextView) findViewById(R.id.textOutput);
         Toast.makeText(this,"Состояние восстановлено",Toast.LENGTH_SHORT).show();
         dataView.setText(textViewText);
-    }
-    private void changeActivity(View view){
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
     }
     private void saveData(View view){
         TextView input = findViewById(R.id.textInput);
